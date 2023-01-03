@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import gql from 'graphql-tag'
 // Glue layer between react and query
 import { graphql } from 'react-apollo'
+import { Link } from "react-router"
 
 class SongList extends Component {
 
@@ -27,6 +28,9 @@ class SongList extends Component {
         <ul className="collection">
           {this.renderSongs()}
         </ul>
+        <Link to={"/songs/new"} className="btn-floating btn-large red right">
+          <i className="material-icons">add</i>
+        </Link>
       </div>
     )
   }
